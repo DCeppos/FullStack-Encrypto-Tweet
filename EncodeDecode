@@ -1,0 +1,58 @@
+//Function to encode text passed from website
+
+function encode(key, tweet){
+    var coded = "";
+    var alphabet ="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var index = 0; 
+    
+    tweet = tweet.toUpperCase();
+    
+    for (var i = 0; i < tweet.length; i++){
+    
+    //checks text against alphabet to see if a letter is being used
+    index = alphabet.indexOf(tweet[i]);
+    
+    //if not a letter in alphabet, just store same character in coded
+    if (index === -1){
+        coded += tweet[i];
+    }
+    
+    //if a letter in alphabet, change the letter according to the encryption key
+    else {
+        coded += key[index];
+        }
+    
+    
+    }
+    return coded + " This tweet was encoded using my very own JavaScript @Fullstack Academy! Click here to decode: http://bit.ly/1xvmJ8B";
+    }
+    
+    
+//   encode("ZYXWVUTSRQPONMLKJIHGFEDCBA", "Hello");
+
+
+// Function to decode text passed from website
+
+function decode(key, tweet){
+    var decoded = "";
+    var alphabet ="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var index = 0; 
+    
+    tweet = tweet.toUpperCase();
+    
+    for (var i = 0; i < tweet.length; i++){
+    index = key.indexOf(tweet[i]);
+    
+    if (index === -1){
+        decoded += tweet[i];
+    }
+    else {
+        decoded += alphabet[index];
+        }
+    
+    
+    }
+    return decoded;
+    }
+    
+//decode("ZYXWVUTSRQPONMLKJIHGFEDCBA", "SVOOL");
