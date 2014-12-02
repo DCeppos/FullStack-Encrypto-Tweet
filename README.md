@@ -8,7 +8,7 @@ It has two functions:
 2. Decodes a string from that same jumble of characters.
 
 Text can be entered to this website: 
-buff.ly/1uZn8Py 
+http://dceppos-encrypto-tweet.pancakeapps.com/
 
 I hosted this page using pancake.io.
 
